@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    int s=sc.nextInt();
+    String []name=new String[s];
+    for(int i=0;i<name.length;i++){
+        name[i]=sc.next();
+        String word=name[i];
+        for(int j=0;j<word.length();j++){
+            if(j%2==0){
+                char elements=word.charAt(j);
+                System.out.print(elements);
+            }
+        }
+        System.out.print(" ");
+        for(int k=0;k<word.length();k++){
+            if(k%2!=0){
+                char odd=word.charAt(k);
+                System.out.print( odd);
+            }
+        }
+        System.out.println();
+    }
+    }
+}
