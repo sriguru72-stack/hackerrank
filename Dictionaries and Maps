@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       Map<String,Integer>phonebook=new HashMap<>();
+       int n=sc.nextInt();
+       sc.nextLine();
+      for(int i = 0; i < n; i++) {
+        String name = sc.next();    
+        int phone = sc.nextInt();   
+        phonebook.put(name, phone);
+    }
+while(sc.hasNext()){
+    String query = sc.next();
+    if(phonebook.containsKey(query)){
+        System.out.println(query + "=" + phonebook.get(query));
+    } else {
+        System.out.println("Not found");
+    }
+}    
+    }
+}
